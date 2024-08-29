@@ -15,7 +15,7 @@ class PublicController extends AbstractController
         ]);
     }
 
-    #[Route('/page/{id<\d{1,3}>?1}', name: 'page')]
+    #[Route('/page/{id<[123]>?1}', name: 'page')]
     public function page(int $id): Response
     {
         return $this->render("public/page.html.twig", [
